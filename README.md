@@ -1,5 +1,7 @@
-This repository is based on the starter code provided by Udacity. You can find it [here](https://github.com/udacity/nd1309/tree/master/course-5/project-6).
-
+This repository is based on the starter code provided by Udacity. You can clone it as follow:
+```
+git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
+```
 
 ## UMLs
 
