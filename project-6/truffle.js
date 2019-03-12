@@ -10,8 +10,8 @@ module.exports = {
     rinkeby: {
       provider: function() {
         return new HDWalletProvider(
-          '',
-          ''
+          '<seed words>',
+          '<infura end-point>'
         )
       },
       network_id: '4',

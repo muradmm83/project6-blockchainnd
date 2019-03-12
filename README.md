@@ -68,3 +68,7 @@ In a separate terminal window, launch the DApp:
 ```
 npm run dev
 ```
+
+## Contract Address
+
+The contract was deployed to ```Rinkeby``` test network with the address of [0xb00FFA5c4F4e564766b8957c9138CF51255e0dAb](https://rinkeby.etherscan.io/tx/0xb3e47deda780fdf0bf16ef7bbff377cafcf7fb2002af502084ce21ad7742b690).
