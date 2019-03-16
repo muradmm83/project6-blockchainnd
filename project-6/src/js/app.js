@@ -221,7 +221,7 @@ App = {
         App.contracts.SupplyChain.deployed().then(function (instance) {
             const productPrice = web3.toWei(1, "ether");
             console.log('productPrice', productPrice);
-            return instance.sellItem(App.upc, productPrice /* App.productPrice */ , {
+            return instance.sellItem(App.upc, App.productPrice, {
                 from: App.metamaskAccountID
             });
         }).then(function (result) {
@@ -239,7 +239,7 @@ App = {
         App.contracts.SupplyChain.deployed().then(function (instance) {
             const walletValue = web3.toWei(3, "ether");
             return instance.buyItem(App.upc, {
-                from: App.retailerID,// App.metamaskAccountID,
+                from: App.metamaskAccountID,
                 value: walletValue
             });
         }).then(function (result) {

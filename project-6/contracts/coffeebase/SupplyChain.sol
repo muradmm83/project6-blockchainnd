@@ -235,7 +235,7 @@ contract SupplyChain is Ownable, ManufacturerRole, RetailerRole, CustomerRole {
     items[_upc].retailerID = msg.sender;
     items[_upc].itemState = State.Sold;
     // Transfer money to manufacturer
-    items[_upc].originManufacturerID.transfer(msg.value);
+    items[_upc].originManufacturerID.transfer(items[_upc].productPrice);
     // emit the appropriate event
     emit Sold(_upc);
   }
