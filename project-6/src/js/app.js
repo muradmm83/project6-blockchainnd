@@ -157,6 +157,15 @@ App = {
             case 10:
                 return await App.fetchItemBufferTwo(event);
                 break;
+            case 11:
+                return await App.addManufacturer(event);
+                break;
+            case 12:
+                return await App.addRetailer(event);
+                break;
+            case 13:
+                return await App.addCustomer(event);
+                break;
         }
     },
 
@@ -347,6 +356,54 @@ App = {
             console.log(err.message);
         });
 
+    },
+
+    addManufacturer: function(event) {
+        event.preventDefault();
+        var processId = parseInt($(event.target).data('id'));
+
+        App.contracts.SupplyChain.deployed().then(function (instance) {
+            return instance.addManufacturer(App.originFarmerID, {
+                from: App.metamaskAccountID
+            });
+        }).then(function (result) {
+            $("#ftc-item").text(result);
+            console.log('purchaseItem', result);
+        }).catch(function (err) {
+            console.log(err.message);
+        });
+    },
+
+    addRetailer: function(event) {
+        event.preventDefault();
+        var processId = parseInt($(event.target).data('id'));
+
+        App.contracts.SupplyChain.deployed().then(function (instance) {
+            return instance.addRetailer(App.retailerID, {
+                from: App.metamaskAccountID
+            });
+        }).then(function (result) {
+            $("#ftc-item").text(result);
+            console.log('purchaseItem', result);
+        }).catch(function (err) {
+            console.log(err.message);
+        });
+    },
+
+    addCustomer: function(event) {
+        event.preventDefault();
+        var processId = parseInt($(event.target).data('id'));
+
+        App.contracts.SupplyChain.deployed().then(function (instance) {
+            return instance.addCustomer(App.consumerID, {
+                from: App.metamaskAccountID
+            });
+        }).then(function (result) {
+            $("#ftc-item").text(result);
+            console.log('purchaseItem', result);
+        }).catch(function (err) {
+            console.log(err.message);
+        });
     },
 };
 

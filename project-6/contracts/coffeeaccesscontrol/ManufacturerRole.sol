@@ -16,7 +16,7 @@ contract ManufacturerRole {
     }
     
     modifier onlyManufacturer() {
-        require(isManufacturer(msg.sender));
+        require(isManufacturer(msg.sender), "Account is not Manufacturer");
         _;
     }
     

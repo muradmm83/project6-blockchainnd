@@ -31,11 +31,11 @@ contract RetailerRole {
     
     function _removeRetailer(address account) internal {
         retailers.remove(account);
+        emit RetailerRemoved(account);
     }
     
     function addRetailer(address account) public onlyRetailer {
         _addRetailer(account);
-        emit RetailerAdded(account);
     }
     
     function renounceRetailer() public {

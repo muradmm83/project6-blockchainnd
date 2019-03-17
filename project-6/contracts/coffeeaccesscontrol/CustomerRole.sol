@@ -12,7 +12,7 @@ contract CustomerRole {
     event CustomerRemoved(address indexed account);
     
     modifier onlyCustomer() {
-        require(isCustomer(msg.sender));
+        require(isCustomer(msg.sender), "Account is not Customer");
         _;
     }
     
