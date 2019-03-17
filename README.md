@@ -1,7 +1,22 @@
+# Supply Chain & Data Auditing
+
+
 This repository is based on the starter code provided by Udacity. You can clone it as follow:
 ```
 git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
 ```
+
+This repository containts an Ethereum DApp that demonstrates a Supply Chain flow between a Seller and Buyer. The user story is similar to any commonly used supply chain process. A Seller can add items to the inventory system stored in the blockchain. A Buyer can purchase such items from the inventory system. Additionally a Seller can mark an item as Shipped, and similarly a Buyer can mark an item as Received.
+
+Here are some screenshots whe run the DApp
+
+![Overview](/images/bw_overview.png)
+
+![Manufacturer Details](images/bw_manufacturer.png)
+
+![Product Details](images/bw_product_details.png)
+
+![Transaction History](images/bw_history.png)
 
 ## UMLs
 
@@ -71,4 +86,4 @@ npm run dev
 
 ## Contract Address
 
-The contract was deployed to ```Rinkeby``` test network with the address of [0xb00FFA5c4F4e564766b8957c9138CF51255e0dAb](https://rinkeby.etherscan.io/tx/0xb3e47deda780fdf0bf16ef7bbff377cafcf7fb2002af502084ce21ad7742b690).
+The contract was deployed to ```Rinkeby``` test network with the address of [0x57D6df48ACda3d450c4872a3B2A80F10c08De705](https://rinkeby.etherscan.io/address/0x57d6df48acda3d450c4872a3b2a80f10c08de705).
